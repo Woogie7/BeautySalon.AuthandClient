@@ -9,3 +9,4 @@ C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Do
 C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Domain\obj\Debug\net8.0\refint\BeautySalon.AuthandClient.Domain.dll
 C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Domain\obj\Debug\net8.0\BeautySalon.AuthandClient.Domain.pdb
 C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Domain\obj\Debug\net8.0\ref\BeautySalon.AuthandClient.Domain.dll
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Domain\obj\Debug\net8.0\BeautySalon.AuthandClient.Domain.sourcelink.json

@@ -2,12 +2,25 @@ namespace BeautySalon.AuthandClient.Domain.Entity;
 
 public class User
 {
-    public Guid Id { get; set; }
-    public string Email { get; set; } = default!;
-    public string PasswordHash { get; set; } = default!;
-    public string Role { get; set; } = default!;
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-    public bool IsActive { get; set; } = true;
+    public Guid Id { get; private set; }
+    public string Email { get; private set; }
+    public string PasswordHash { get; private set; }
+    public UserRole Role { get; private set; }
+    public DateTime CreatedAt { get; private set; }
 
-    public Client? Client { get; set; }
+    private User() {}
+
+    private User(string email, string passwordHash, UserRole role)
+    {
+        Id = Guid.NewGuid();
+        Email = email;
+        PasswordHash = passwordHash;
+        Role = role;
+        CreatedAt = DateTime.UtcNow;
+    }
+
+    public static User Create(string email, string passwordHash, UserRole role)
+    {
+        return new User(email, passwordHash, role);
+    }
 }

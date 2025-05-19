@@ -15,3 +15,6 @@ C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Pe
 C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\obj\Debug\net8.0\BeautySalon.AuthandClient.Persistence.pdb
 C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\obj\Debug\net8.0\BeautySalon.AuthandClient.Persistence.genruntimeconfig.cache
 C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\obj\Debug\net8.0\ref\BeautySalon.AuthandClient.Persistence.dll
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\obj\Debug\net8.0\BeautySalon.AuthandClient.Persistence.sourcelink.json
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\bin\Debug\net8.0\BeautySalon.AuthandClient.Application.dll
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\bin\Debug\net8.0\BeautySalon.AuthandClient.Application.pdb

@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeautySalon.AuthandClient.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeautySalon.AuthandClient.Persistence", "BeautySalon.AuthandClient.Persistence\BeautySalon.AuthandClient.Persistence.csproj", "{FFE6BFF6-C1D1-41D1-879C-561987ADA706}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeautySalon.AuthandClient.Application", "BeautySalon.AuthandClient.Application\BeautySalon.AuthandClient.Application.csproj", "{31E35FF5-16F0-4525-AD5F-9F35FF35E404}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeautySalon.AuthandClient.Infrastructure", "BeautySalon.AuthandClient.Infrastructure\BeautySalon.AuthandClient.Infrastructure.csproj", "{6FFB4B5A-5CAE-408A-9C41-F6F1F8F25AAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{FFE6BFF6-C1D1-41D1-879C-561987ADA706}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFE6BFF6-C1D1-41D1-879C-561987ADA706}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFE6BFF6-C1D1-41D1-879C-561987ADA706}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31E35FF5-16F0-4525-AD5F-9F35FF35E404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31E35FF5-16F0-4525-AD5F-9F35FF35E404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31E35FF5-16F0-4525-AD5F-9F35FF35E404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31E35FF5-16F0-4525-AD5F-9F35FF35E404}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FFB4B5A-5CAE-408A-9C41-F6F1F8F25AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FFB4B5A-5CAE-408A-9C41-F6F1F8F25AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FFB4B5A-5CAE-408A-9C41-F6F1F8F25AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FFB4B5A-5CAE-408A-9C41-F6F1F8F25AAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

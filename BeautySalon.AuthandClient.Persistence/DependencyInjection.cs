@@ -1,3 +1,4 @@
+using BeautySalon.AuthandClient.Application.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,6 +14,9 @@ public static class DependencyInjection
         {
             o.UseNpgsql(сonnection);
         });
+        
+        services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IClientRepository, ClientRepository>();
 
         return services;
     }

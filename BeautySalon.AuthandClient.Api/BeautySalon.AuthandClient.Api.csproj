@@ -10,6 +10,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\BeautySalon.AuthandClient.Infrastructure\BeautySalon.AuthandClient.Infrastructure.csproj" />
       <ProjectReference Include="..\BeautySalon.AuthandClient.Persistence\BeautySalon.AuthandClient.Persistence.csproj" />
     </ItemGroup>
 
