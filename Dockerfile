@@ -17,7 +17,7 @@ RUN dotnet build "./BeautySalon.AuthandClient.Api.csproj" -c $BUILD_CONFIGURATIO
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./BeautySalon.AuthandClient.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./BeautySalon.AuthandClient.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=true  
 
 FROM base AS final
 WORKDIR /app
