@@ -1,0 +1,17 @@
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\bin\Debug\net8.0\BeautySalon.AuthandClient.Persistence.deps.json
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\bin\Debug\net8.0\BeautySalon.AuthandClient.Persistence.runtimeconfig.json
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\bin\Debug\net8.0\BeautySalon.AuthandClient.Persistence.dll
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\bin\Debug\net8.0\BeautySalon.AuthandClient.Persistence.pdb
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\bin\Debug\net8.0\BeautySalon.AuthandClient.Domain.dll
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\bin\Debug\net8.0\BeautySalon.AuthandClient.Domain.pdb
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\obj\Debug\net8.0\BeautySalon.AuthandClient.Persistence.csproj.AssemblyReference.cache
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\obj\Debug\net8.0\BeautySalon.AuthandClient.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\obj\Debug\net8.0\BeautySalon.AuthandClient.Persistence.AssemblyInfoInputs.cache
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\obj\Debug\net8.0\BeautySalon.AuthandClient.Persistence.AssemblyInfo.cs
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\obj\Debug\net8.0\BeautySalon.AuthandClient.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\obj\Debug\net8.0\BeautySa.1D70727C.Up2Date
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\obj\Debug\net8.0\BeautySalon.AuthandClient.Persistence.dll
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\obj\Debug\net8.0\refint\BeautySalon.AuthandClient.Persistence.dll
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\obj\Debug\net8.0\BeautySalon.AuthandClient.Persistence.pdb
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\obj\Debug\net8.0\BeautySalon.AuthandClient.Persistence.genruntimeconfig.cache
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Persistence\obj\Debug\net8.0\ref\BeautySalon.AuthandClient.Persistence.dll

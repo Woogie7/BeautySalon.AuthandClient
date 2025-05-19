@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeautySalon.AuthandClient.Api", "BeautySalon.AuthandClient.Api\BeautySalon.AuthandClient.Api.csproj", "{69AF0D76-C594-49F7-9E93-5EBBFB7CEDC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeautySalon.AuthandClient.Domain", "BeautySalon.AuthandClient.Domain\BeautySalon.AuthandClient.Domain.csproj", "{3751088E-E6C1-48CC-B2F2-ED1E1228FB24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeautySalon.AuthandClient.Persistence", "BeautySalon.AuthandClient.Persistence\BeautySalon.AuthandClient.Persistence.csproj", "{FFE6BFF6-C1D1-41D1-879C-561987ADA706}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69AF0D76-C594-49F7-9E93-5EBBFB7CEDC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69AF0D76-C594-49F7-9E93-5EBBFB7CEDC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69AF0D76-C594-49F7-9E93-5EBBFB7CEDC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69AF0D76-C594-49F7-9E93-5EBBFB7CEDC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3751088E-E6C1-48CC-B2F2-ED1E1228FB24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3751088E-E6C1-48CC-B2F2-ED1E1228FB24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3751088E-E6C1-48CC-B2F2-ED1E1228FB24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3751088E-E6C1-48CC-B2F2-ED1E1228FB24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFE6BFF6-C1D1-41D1-879C-561987ADA706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFE6BFF6-C1D1-41D1-879C-561987ADA706}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFE6BFF6-C1D1-41D1-879C-561987ADA706}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFE6BFF6-C1D1-41D1-879C-561987ADA706}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
