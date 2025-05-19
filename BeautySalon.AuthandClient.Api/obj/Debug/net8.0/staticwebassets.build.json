@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "V0LI9yt3DLAM2gDS4ul9KXkQk2SyTpF9Q2wHkfg9n0E=",
+  "Source": "BeautySalon.AuthandClient.Api",
+  "BasePath": "_content/BeautySalon.AuthandClient.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

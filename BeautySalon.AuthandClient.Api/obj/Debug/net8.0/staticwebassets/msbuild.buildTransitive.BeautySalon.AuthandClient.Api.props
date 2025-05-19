@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\BeautySalon.AuthandClient.Api.props" />
+</Project>
