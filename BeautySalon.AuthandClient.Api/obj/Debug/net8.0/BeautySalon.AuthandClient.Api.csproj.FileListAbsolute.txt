@@ -42,3 +42,4 @@ C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Ap
 C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Api\obj\Debug\net8.0\BeautySalon.AuthandClient.Api.pdb
 C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Api\obj\Debug\net8.0\BeautySalon.AuthandClient.Api.genruntimeconfig.cache
 C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Api\obj\Debug\net8.0\ref\BeautySalon.AuthandClient.Api.dll
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Api\obj\Debug\net8.0\BeautySalon.AuthandClient.Api.sourcelink.json
