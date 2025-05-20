@@ -9,16 +9,25 @@ using BeautySalon.AuthandClient.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("Logs/log-.txt", rollingInterval: RollingInterval.Day)
+    .MinimumLevel.Information()  
+    .CreateLogger();
+
+builder.Host.UseSerilog();
+
 var jwtOptions = builder.Configuration.GetSection("JwtOptions").Get<JwtOptions>()!;
-if (string.IsNullOrEmpty(jwtOptions?.SecretKey))
-{
-    throw new InvalidOperationException("JWT SecretKey is not configured.");
-}
+
+Log.Logger.Information("JwtOptions in Employees Service: SecretKey = {SecretKey}, Issuer = {Issuer}, Audience = {Audience}",
+    jwtOptions.SecretKey, jwtOptions.Issuer, jwtOptions.Audience);
+
 var key = Encoding.UTF8.GetBytes(jwtOptions.SecretKey);
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

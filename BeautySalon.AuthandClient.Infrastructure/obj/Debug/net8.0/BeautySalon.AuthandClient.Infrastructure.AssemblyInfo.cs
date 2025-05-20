@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BeautySalon.AuthandClient.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f006998c34b06b609373cc9cde9eb28fd23b8ea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+688ac0200b013d0eb54ef665209696e8e798904b")]
 [assembly: System.Reflection.AssemblyProductAttribute("BeautySalon.AuthandClient.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BeautySalon.AuthandClient.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
