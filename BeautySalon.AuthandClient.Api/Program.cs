@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using System.Text;
 using BeautySalon.AuthandClient;
 using BeautySalon.AuthandClient.Application;
@@ -6,6 +7,7 @@ using BeautySalon.AuthandClient.Infrastructure;
 using BeautySalon.AuthandClient.Infrastructure.Auht;
 using BeautySalon.AuthandClient.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -52,5 +54,27 @@ app.UseAuthorization();
 
 app.MapAuthEndpoints();
 app.MapClientEndpoints();
+
+app.MapGet("/auth/me", (HttpContext context) =>
+    {
+        var user = context.User;
+
+        if (!user.Identity?.IsAuthenticated ?? false)
+            return Results.Unauthorized();
+
+        var userId = user.FindFirst(ClaimTypes.NameIdentifier)?.Value
+                     ?? user.FindFirst(JwtRegisteredClaimNames.Sub)?.Value;
+        var role = user.FindFirst(ClaimTypes.Role)?.Value;
+        var email = user.FindFirst(ClaimTypes.Email)?.Value;
+
+        return Results.Ok(new
+        {
+            UserId = userId,
+            Email = email,
+            Role = role
+        });
+    })
+    .RequireAuthorization();
+
 
 app.Run();
