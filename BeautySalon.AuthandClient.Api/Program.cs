@@ -4,6 +4,7 @@ using BeautySalon.AuthandClient.Application;
 using BeautySalon.AuthandClient.Persistence;
 using BeautySalon.AuthandClient.Infrastructure;
 using BeautySalon.AuthandClient.Infrastructure.Auht;
+using BeautySalon.AuthandClient.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 
@@ -37,6 +38,10 @@ builder.Services.AddApplication();
 builder.Services.AddInfrastructure();
 
 var app = builder.Build();
+
+await app.MigrateDbAsync();
+
+app.UseExceptionHandling();
 
 app.UseAuthentication();
 app.UseAuthorization();
