@@ -1,0 +1,16 @@
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Application\bin\Debug\net8.0\BeautySalon.AuthandClient.Application.deps.json
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Application\bin\Debug\net8.0\BeautySalon.AuthandClient.Application.dll
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Application\bin\Debug\net8.0\BeautySalon.AuthandClient.Application.pdb
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Application\bin\Debug\net8.0\BeautySalon.AuthandClient.Domain.dll
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Application\bin\Debug\net8.0\BeautySalon.AuthandClient.Domain.pdb
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Application\obj\Debug\net8.0\BeautySalon.AuthandClient.Application.csproj.AssemblyReference.cache
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Application\obj\Debug\net8.0\BeautySalon.AuthandClient.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Application\obj\Debug\net8.0\BeautySalon.AuthandClient.Application.AssemblyInfoInputs.cache
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Application\obj\Debug\net8.0\BeautySalon.AuthandClient.Application.AssemblyInfo.cs
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Application\obj\Debug\net8.0\BeautySalon.AuthandClient.Application.csproj.CoreCompileInputs.cache
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Application\obj\Debug\net8.0\BeautySalon.AuthandClient.Application.sourcelink.json
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Application\obj\Debug\net8.0\BeautySa.00A24133.Up2Date
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Application\obj\Debug\net8.0\BeautySalon.AuthandClient.Application.dll
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Application\obj\Debug\net8.0\refint\BeautySalon.AuthandClient.Application.dll
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Application\obj\Debug\net8.0\BeautySalon.AuthandClient.Application.pdb
+C:\Users\HP\RiderProjects\BeautySalon.AuthandClient\BeautySalon.AuthandClient.Application\obj\Debug\net8.0\ref\BeautySalon.AuthandClient.Application.dll

@@ -57,7 +57,7 @@ public class JwtTokenGenerator : IJwtTokenGenerator
                 ValidateAudience = true,
                 ValidAudience = _options.Audience,
                 ValidateLifetime = true,
-                ClockSkew = TimeSpan.Zero // ⏱️ нет поблажки на время
+                ClockSkew = TimeSpan.Zero
             }, out SecurityToken validatedToken);
 
             return true;
