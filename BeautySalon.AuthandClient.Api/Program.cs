@@ -13,6 +13,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 
 var jwtOptions = builder.Configuration.GetSection("JwtOptions").Get<JwtOptions>()!;
+if (string.IsNullOrEmpty(jwtOptions?.SecretKey))
+{
+    throw new InvalidOperationException("JWT SecretKey is not configured.");
+}
 var key = Encoding.UTF8.GetBytes(jwtOptions.SecretKey);
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -35,7 +39,7 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddPersistence(builder.Configuration);
 builder.Services.AddApplication();
-builder.Services.AddInfrastructure();
+builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
