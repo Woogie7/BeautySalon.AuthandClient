@@ -9,7 +9,7 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration confing)
     {
-        var сonnection = confing.GetConnectionString("EmployeesDatabase");
+        var сonnection = confing.GetConnectionString("AuthandClientDatabase");
         services.AddDbContext<AuthandClientDbContext>(o =>
         {
             o.UseNpgsql(сonnection);

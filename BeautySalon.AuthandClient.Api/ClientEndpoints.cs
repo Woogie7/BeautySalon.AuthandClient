@@ -7,7 +7,7 @@ public static class ClientEndpoints
     public static IEndpointRouteBuilder MapClientEndpoints(this IEndpointRouteBuilder app)
     {
         var group = app.MapGroup("/api/client")
-            .RequireAuthorization(); // ⬅️ Авторизация
+            .RequireAuthorization();
 
         group.MapGet("/me", (ClaimsPrincipal user) =>
         {
