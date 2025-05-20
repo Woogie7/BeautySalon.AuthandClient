@@ -1,3 +1,5 @@
+using System.Security.Claims;
+
 namespace BeautySalon.AuthandClient;
 
 public static class ClientEndpoints
