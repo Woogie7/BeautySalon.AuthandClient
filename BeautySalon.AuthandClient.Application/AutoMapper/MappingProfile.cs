@@ -8,11 +8,11 @@ public class MappingProfile : Profile
 {
     public MappingProfile()
     {
-        CreateMap<RegisterClientDto, User>()
+        CreateMap<RegisterUserDto, User>()
             .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email));
 
 
-        CreateMap<RegisterClientDto, Client>()
+        CreateMap<RegisterUserDto, Client>()
             .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FullName))
             .ForMember(dest => dest.Phone, opt => opt.MapFrom(src => src.Phone));
     }

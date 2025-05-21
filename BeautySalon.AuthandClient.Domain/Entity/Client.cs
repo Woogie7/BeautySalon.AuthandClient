@@ -3,9 +3,9 @@ namespace BeautySalon.AuthandClient.Domain.Entity;
 public class Client
 {
     public Guid Id { get; set; }
-    public Guid UserId { get; private set; } // FK → User
-    public string FullName { get; private set; }
-    public string Phone { get; private set; }
+    public Guid UserId { get; set; } // FK → User
+    public string FullName { get; set; }
+    public string Phone { get; set; }
 
     private Client() { }
 

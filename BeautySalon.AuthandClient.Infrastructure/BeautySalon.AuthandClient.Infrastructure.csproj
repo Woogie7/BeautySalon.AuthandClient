@@ -12,6 +12,8 @@
 
     <ItemGroup>
       <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+      <PackageReference Include="BeautySalon.Contracts" Version="1.0.7" />
+      <PackageReference Include="MassTransit.RabbitMQ" Version="8.4.1" />
       <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.10.0" />
     </ItemGroup>
 

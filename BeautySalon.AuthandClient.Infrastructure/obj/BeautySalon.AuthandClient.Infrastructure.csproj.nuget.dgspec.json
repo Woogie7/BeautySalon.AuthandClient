@@ -221,6 +221,14 @@
               "target": "Package",
               "version": "[4.0.3, )"
             },
+            "BeautySalon.Contracts": {
+              "target": "Package",
+              "version": "[1.0.7, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.4.1, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[8.10.0, )"

@@ -3,8 +3,9 @@ using BeautySalon.AuthandClient.Application.DTO;
 using BeautySalon.AuthandClient.Application.Interfaces;
 using BeautySalon.AuthandClient.Domain;
 using BeautySalon.AuthandClient.Domain.Entity;
+using BeautySalon.Contracts;
 
-namespace BeautySalon.AuthandClient.Infrastructure.Auht;
+namespace BeautySalon.AuthandClient.Infrastructure.Auh;
 
 public class AuthService : IAuthService
 {
@@ -12,23 +13,23 @@ public class AuthService : IAuthService
     private readonly IClientRepository _clientRepository;
     private readonly IPasswordHasher _passwordHasher; 
     private readonly IJwtTokenGenerator _jwtTokenGenerator;
-    private readonly IMapper _mapper;
+    private readonly IEventBus _eventBus;
 
     public AuthService(
         IUserRepository userRepository,
         IClientRepository clientRepository,
         IPasswordHasher passwordHasher,
         IJwtTokenGenerator jwtTokenGenerator,
-        IMapper mapper)
+        IEventBus eventBus)
     {
         _userRepository = userRepository;
         _clientRepository = clientRepository;
         _passwordHasher = passwordHasher;
         _jwtTokenGenerator = jwtTokenGenerator;
-        _mapper = mapper;
+        _eventBus = eventBus;
     }
 
-    public async Task<AuthResponseDto> RegisterClientAsync(RegisterClientDto dto)
+    public async Task<AuthResponseDto> RegisterClientAsync(RegisterUserDto dto)
     {
         var existingUser = await _userRepository.GetByEmailAsync(dto.Email);
         if (existingUser != null)
@@ -36,11 +37,32 @@ public class AuthService : IAuthService
 
         var passwordHash = _passwordHasher.HashPassword(dto.Password);
         
-        var user = User.Create(dto.Email, passwordHash, UserRole.Client);
-        await _userRepository.AddAsync(user);
+        var role = dto.Role is not null
+            ? Enumeration.FromDisplayName<UserRole>(dto.Role)
+            : UserRole.Client;
         
-        var client = Client.Create(user.Id, dto.FullName, dto.Phone);
-        await _clientRepository.AddAsync(client);
+        var user = User.Create(dto.Email, passwordHash, role);
+        await _userRepository.AddAsync(user);
+        switch (role.Name)
+        {
+            case "Client":
+                var client = Client.Create(user.Id, dto.FullName, dto.Phone);
+                await _clientRepository.AddAsync(client);
+                break;
+        
+            case "Employee":
+                await _eventBus.SendMessageAsync(new EmployeeCreatedEvent
+                    {
+                        UserId = user.Id,
+                        FullName = dto.FullName,
+                        Phone = dto.Phone,
+                        Email = dto.Email
+                    });
+                break;
+
+            default:
+                throw new Exception("Unsupported role");
+        }
         
         var token = _jwtTokenGenerator.GenerateToken(user.Id, user.Role.Name);
 

@@ -6,6 +6,8 @@ using BeautySalon.AuthandClient.Persistence;
 using BeautySalon.AuthandClient.Infrastructure;
 using BeautySalon.AuthandClient.Infrastructure.Auht;
 using BeautySalon.AuthandClient.Middleware;
+using BeautySalon.Booking.Infrastructure.Rabbitmq;
+using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
@@ -46,7 +48,35 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-builder.Services.AddAuthorization();
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy =>
+        policy.RequireRole("Admin"));
+        
+    options.AddPolicy("EmployeeOnly", policy =>
+        policy.RequireRole("Employee"));
+        
+    options.AddPolicy("ClientOnly", policy =>
+        policy.RequireRole("Client"));
+});
+
+builder.Services.AddMassTransit(busConfing =>
+{
+    busConfing.SetKebabCaseEndpointNameFormatter();
+
+    busConfing.UsingRabbitMq((context, configurator) =>
+    {
+        configurator.Host(new Uri("amqp://rabbitmq:5672"), h =>
+        {
+            h.Username("guest");
+            h.Password("guest");
+        });
+
+        configurator.ConfigureEndpoints(context);
+    });
+});
+
+builder.Services.Configure<MessageBrokerSettings>(builder.Configuration.GetSection("MessageBroker"));
 
 builder.Services.AddPersistence(builder.Configuration);
 builder.Services.AddApplication();

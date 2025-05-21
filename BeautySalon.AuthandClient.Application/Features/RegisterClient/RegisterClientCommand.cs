@@ -5,10 +5,10 @@ namespace BeautySalon.AuthandClient.Application.Features.RegisterClient;
 
 public class RegisterClientCommand : IRequest<AuthResponseDto>
 {
-    public RegisterClientDto RegisterClientDto { get; }
+    public RegisterUserDto RegisterUserDto { get; }
 
-    public RegisterClientCommand(RegisterClientDto dto)
+    public RegisterClientCommand(RegisterUserDto dto)
     {
-        RegisterClientDto = dto;
+        RegisterUserDto = dto;
     }
 }

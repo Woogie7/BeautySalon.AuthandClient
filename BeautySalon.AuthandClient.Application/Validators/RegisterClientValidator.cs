@@ -3,7 +3,7 @@ using FluentValidation;
 
 namespace BeautySalon.AuthandClient.Application.Validators;
 
-public class RegisterClientValidator : AbstractValidator<RegisterClientDto>
+public class RegisterClientValidator : AbstractValidator<RegisterUserDto>
 {
     public RegisterClientValidator()
     {
