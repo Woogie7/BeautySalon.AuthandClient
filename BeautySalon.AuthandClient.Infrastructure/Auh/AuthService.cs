@@ -64,7 +64,7 @@ public class AuthService : IAuthService
                 throw new Exception("Unsupported role");
         }
         
-        var token = _jwtTokenGenerator.GenerateToken(user.Id, user.Role.Name);
+        var token = _jwtTokenGenerator.GenerateToken(user.Id, user.Role.Name, user.Email);
 
         return new AuthResponseDto
         {
@@ -85,7 +85,7 @@ public class AuthService : IAuthService
         if (!validPassword)
             throw new Exception("Invalid email or password");
 
-        var token = _jwtTokenGenerator.GenerateToken(user.Id, user.Role.Name);
+        var token = _jwtTokenGenerator.GenerateToken(user.Id, user.Role.Name, email);
 
         return new AuthResponseDto
         {

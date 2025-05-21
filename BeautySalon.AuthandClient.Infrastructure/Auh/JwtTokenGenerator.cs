@@ -17,12 +17,13 @@ public class JwtTokenGenerator : IJwtTokenGenerator
         _options = options.Value;
     }
 
-    public string GenerateToken(Guid userId, string role)
+    public string GenerateToken(Guid userId, string role, string email)
     {
         var claims = new[]
         {
             new Claim(JwtRegisteredClaimNames.Sub, userId.ToString()),
             new Claim(ClaimTypes.Role, role),
+            new Claim(JwtRegisteredClaimNames.Email, email),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
         };
 

@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using BeautySalon.AuthandClient.Application.Features.ClientFeatures;
+using BeautySalon.AuthandClient.Application.Features.ClientFeatures.GetClientByUserId;
 using MediatR;
 
 namespace BeautySalon.AuthandClient;
