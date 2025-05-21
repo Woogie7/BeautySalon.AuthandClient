@@ -46,7 +46,7 @@ public class AuthService : IAuthService
         switch (role.Name)
         {
             case "Client":
-                var client = Client.Create(user.Id, dto.FullName, dto.Phone);
+                var client = Client.Create(user.Id, dto.FirstName + "" + dto.LastName, dto.Phone);
                 await _clientRepository.AddAsync(client);
                 break;
         
@@ -54,7 +54,8 @@ public class AuthService : IAuthService
                 await _eventBus.SendMessageAsync(new EmployeeCreatedEvent
                     {
                         UserId = user.Id,
-                        FullName = dto.FullName,
+                        FirstName = dto.FirstName,
+                        LastName = dto.LastName,
                         Phone = dto.Phone,
                         Email = dto.Email
                     });

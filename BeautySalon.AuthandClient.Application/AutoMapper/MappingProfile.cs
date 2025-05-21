@@ -13,7 +13,7 @@ public class MappingProfile : Profile
 
 
         CreateMap<RegisterUserDto, Client>()
-            .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FullName))
+            .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FirstName + " " + src.LastName))
             .ForMember(dest => dest.Phone, opt => opt.MapFrom(src => src.Phone));
     }
 }
