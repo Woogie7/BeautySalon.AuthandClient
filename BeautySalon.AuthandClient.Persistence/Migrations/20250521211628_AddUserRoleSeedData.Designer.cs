@@ -3,6 +3,7 @@ using System;
 using BeautySalon.AuthandClient.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BeautySalon.AuthandClient.Persistence.Migrations
 {
     [DbContext(typeof(AuthandClientDbContext))]
-    partial class AuthandClientDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250521211628_AddUserRoleSeedData")]
+    partial class AddUserRoleSeedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
