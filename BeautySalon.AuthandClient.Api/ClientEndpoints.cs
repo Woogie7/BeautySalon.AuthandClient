@@ -2,6 +2,7 @@ using System.Security.Claims;
 using BeautySalon.AuthandClient.Application.Features.ClientFeatures;
 using BeautySalon.AuthandClient.Application.Features.ClientFeatures.GetClientByUserId;
 using MediatR;
+using Microsoft.IdentityModel.JsonWebTokens;
 
 namespace BeautySalon.AuthandClient;
 
@@ -14,7 +15,9 @@ public static class ClientEndpoints
 
         group.MapGet("/me", async (ClaimsPrincipal user, ISender sender) =>
         {
-            var userIdClaim = user.FindFirst("userId")?.Value;
+            var userIdClaim = user.FindFirst(ClaimTypes.NameIdentifier)?.Value
+                              ?? user.FindFirst(JwtRegisteredClaimNames.Sub)?.Value;
+
             if (string.IsNullOrEmpty(userIdClaim) || !Guid.TryParse(userIdClaim, out var userId))
                 return Results.Unauthorized();
 
@@ -26,7 +29,9 @@ public static class ClientEndpoints
 
         group.MapPut("/me", async (ClaimsPrincipal user, UpdateClientDto  dto, ISender sender) =>
         {
-            var userIdClaim = user.FindFirst("userId")?.Value;
+            var userIdClaim = user.FindFirst(ClaimTypes.NameIdentifier)?.Value
+                              ?? user.FindFirst(JwtRegisteredClaimNames.Sub)?.Value;
+
             if (string.IsNullOrEmpty(userIdClaim) || !Guid.TryParse(userIdClaim, out var userId))
                 return Results.Unauthorized();
 
