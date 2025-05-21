@@ -4,6 +4,7 @@ using BeautySalon.AuthandClient.Application.Interfaces;
 using BeautySalon.AuthandClient.Domain;
 using BeautySalon.AuthandClient.Domain.Entity;
 using BeautySalon.Contracts;
+using Microsoft.Extensions.Logging;
 
 namespace BeautySalon.AuthandClient.Infrastructure.Auh;
 
@@ -14,19 +15,21 @@ public class AuthService : IAuthService
     private readonly IPasswordHasher _passwordHasher; 
     private readonly IJwtTokenGenerator _jwtTokenGenerator;
     private readonly IEventBus _eventBus;
+    private readonly ILogger<AuthService>_logger;
 
     public AuthService(
         IUserRepository userRepository,
         IClientRepository clientRepository,
         IPasswordHasher passwordHasher,
         IJwtTokenGenerator jwtTokenGenerator,
-        IEventBus eventBus)
+        IEventBus eventBus, ILogger<AuthService> logger)
     {
         _userRepository = userRepository;
         _clientRepository = clientRepository;
         _passwordHasher = passwordHasher;
         _jwtTokenGenerator = jwtTokenGenerator;
         _eventBus = eventBus;
+        _logger = logger;
     }
 
     public async Task<AuthResponseDto> RegisterClientAsync(RegisterUserDto dto)
@@ -51,6 +54,8 @@ public class AuthService : IAuthService
                 break;
         
             case "Employee":
+                _logger.LogInformation("Регистрация сотрудника: {FirstName} {LastName}", dto.FirstName, dto.LastName);
+
                 await _eventBus.SendMessageAsync(new EmployeeCreatedEvent
                     {
                         UserId = user.Id,
@@ -59,6 +64,7 @@ public class AuthService : IAuthService
                         Phone = dto.Phone,
                         Email = dto.Email
                     });
+                
                 break;
 
             default:
