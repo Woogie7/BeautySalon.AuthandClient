@@ -51,6 +51,15 @@ public class AuthService : IAuthService
             case "Client":
                 var client = Client.Create(user.Id, dto.FirstName + "" + dto.LastName, dto.Phone);
                 await _clientRepository.AddAsync(client);
+                
+                await _eventBus.SendMessageAsync(new ClientCreatedEvent
+                                    {
+                                        UserId = user.Id,
+                                        FirstName = dto.FirstName,
+                                        LastName = dto.LastName,
+                                        Phone = dto.Phone,
+                                        Email = dto.Email
+                                    });
                 break;
         
             case "Employee":

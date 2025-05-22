@@ -31,7 +31,7 @@
           }
         }
       },
-      "BeautySalon.Contracts/1.0.8": {
+      "BeautySalon.Contracts/1.1.0": {
         "type": "package",
         "compile": {
           "lib/net8.0/BeautySalon.Contracts.dll": {}
@@ -578,13 +578,13 @@
         "readme.md"
       ]
     },
-    "BeautySalon.Contracts/1.0.8": {
-      "sha512": "MMp61GKnCwssrEuVBLVBOdyozBTj0FSzPEIHLhn+s1Bln6MpEi+kyYRWOSRLM1uEdPFndiPbQOYJMsnXnmINew==",
+    "BeautySalon.Contracts/1.1.0": {
+      "sha512": "gNfBIhzZRDwv/hsQ6BFwGIU7GCp1tT9BW3BBNkQ2fUeb+qnMTrw1oW0i0t+j9umRgjj61JdZz/GRVIFltbhEJg==",
       "type": "package",
-      "path": "beautysalon.contracts/1.0.8",
+      "path": "beautysalon.contracts/1.1.0",
       "files": [
         ".nupkg.metadata",
-        "beautysalon.contracts.1.0.8.nupkg.sha512",
+        "beautysalon.contracts.1.1.0.nupkg.sha512",
         "beautysalon.contracts.nuspec",
         "lib/net8.0/BeautySalon.Contracts.dll"
       ]
@@ -1308,7 +1308,7 @@
     "net8.0": [
       "BCrypt.Net-Next >= 4.0.3",
       "BeautySalon.AuthandClient.Application >= 1.0.0",
-      "BeautySalon.Contracts >= 1.0.8",
+      "BeautySalon.Contracts >= 1.1.0",
       "MassTransit.RabbitMQ >= 8.4.1",
       "System.IdentityModel.Tokens.Jwt >= 8.10.0"
     ]
@@ -1375,7 +1375,7 @@
           },
           "BeautySalon.Contracts": {
             "target": "Package",
-            "version": "[1.0.8, )"
+            "version": "[1.1.0, )"
           },
           "MassTransit.RabbitMQ": {
             "target": "Package",
