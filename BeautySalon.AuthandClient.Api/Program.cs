@@ -96,7 +96,7 @@ app.UseAuthorization();
 app.MapAuthEndpoints();
 app.MapClientEndpoints();
 
-app.MapGet("/auth/me", (HttpContext context) =>
+app.MapGet("/me", (HttpContext context) =>
     {
         var user = context.User;
 
