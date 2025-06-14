@@ -91,8 +91,6 @@ app.UseExceptionHandling();
 app.UseAuthentication();
 app.UseAuthorization();
 
-
-
 app.MapAuthEndpoints();
 app.MapClientEndpoints();
 
