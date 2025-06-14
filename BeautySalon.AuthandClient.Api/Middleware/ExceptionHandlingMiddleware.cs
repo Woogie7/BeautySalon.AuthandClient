@@ -19,39 +19,43 @@ public class ExceptionHandlingMiddleware
         {
             await _next(context);
         }
-        /*catch (BadRequestException ex)
-        {
-            _logger.LogError(ex, "Bad Request error occurred");
-            context.Response.StatusCode = StatusCodes.Status400BadRequest;
-            await context.Response.WriteAsJsonAsync(new { Message = ex.Message });
-        }
-        catch (NotFoundException ex)
-        {
-            context.Response.StatusCode = StatusCodes.Status404NotFound;
-            await context.Response.WriteAsJsonAsync(new { error = ex.Message });
-        }
-        catch (ConflictException ex)
-        {
-            context.Response.StatusCode = StatusCodes.Status409Conflict;
-            await context.Response.WriteAsJsonAsync(new { error = ex.Message });
-        }*/
+      
         catch (ArgumentException ex)
         {
             _logger.LogWarning(ex, "Validation error: {Message}", ex.Message);
-            context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+            context.Response.StatusCode = StatusCodes.Status400BadRequest;
             await context.Response.WriteAsJsonAsync(new { error = ex.Message });
         }
         catch (ApplicationException ex)
         {
-            _logger.LogError(ex, "Application error");
-            context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+            _logger.LogWarning(ex, "Application error: {Message}", ex.Message);
+            context.Response.StatusCode = StatusCodes.Status400BadRequest;
             await context.Response.WriteAsJsonAsync(new { error = ex.Message });
         }
+        
+        catch (UnauthorizedAccessException ex)
+        {
+            _logger.LogWarning(ex, "Unauthorized: {Message}", ex.Message);
+            context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+            await context.Response.WriteAsJsonAsync(new { error = ex.Message });
+        }
+        
+        catch (KeyNotFoundException ex)
+        {
+            _logger.LogWarning(ex, "Not Found: {Message}", ex.Message);
+            context.Response.StatusCode = StatusCodes.Status404NotFound;
+            await context.Response.WriteAsJsonAsync(new { error = ex.Message });
+        }
+        
         catch (Exception ex)
         {
             _logger.LogError(ex, "Unexpected error");
-            context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-            await context.Response.WriteAsJsonAsync(new { error = "Внутренняя ошибка сервера", detail = ex.Message });
+            context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+            await context.Response.WriteAsJsonAsync(new
+            {
+                error = "Внутренняя ошибка сервера",
+                detail = ex.Message
+            });
         }
     }
 }

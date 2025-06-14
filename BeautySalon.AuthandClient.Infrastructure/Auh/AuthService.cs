@@ -36,7 +36,7 @@ public class AuthService : IAuthService
     {
         var existingUser = await _userRepository.GetByEmailAsync(dto.Email);
         if (existingUser != null)
-            throw new Exception("Email is already registered");
+            throw new ApplicationException("Пользователь с таким Email уже существует");
 
         var passwordHash = _passwordHasher.HashPassword(dto.Password);
         

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BeautySalon.AuthandClient.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a84836bd7213730b37d436e05b92487821aaa46e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39295992db540aa52475118bc4c7a34fd372c012")]
 [assembly: System.Reflection.AssemblyProductAttribute("BeautySalon.AuthandClient.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BeautySalon.AuthandClient.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

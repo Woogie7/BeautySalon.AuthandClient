@@ -8,7 +8,6 @@ using BeautySalon.AuthandClient.Persistence;
 public class UserRepository : IUserRepository
 {
     private readonly AuthandClientDbContext _dbContext;
-
     public UserRepository(AuthandClientDbContext dbContext)
     {
         _dbContext = dbContext;
